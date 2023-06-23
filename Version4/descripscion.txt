@@ -1,0 +1,2 @@
+No tiene bastion
+Se busca levantar todo con provider de kubernetes y archivos de manifiesto
