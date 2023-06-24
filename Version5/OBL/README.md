@@ -40,7 +40,7 @@ Este enfoque permite automatizar el despliegue de la infraestructura y facilita 
 ## Demostracion de funcionamiento
 ***
 #### Equipo Bastion en AWS
-![GifBastionAWS](./files/images/obl2023.png) <br>
+![GifBastionAWS](https://www.youtube.com/watch?v=IhmfQYJdJBE) <br>
 #### Equipo Local con Ubuntu
 ![GifBastionLocal](./files/images/obl2023.png)<br>
 
