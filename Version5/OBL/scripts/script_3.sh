@@ -7,10 +7,7 @@ carpetas=("adservice" "checkoutservice" "currencyservice" "emailservice" "fronte
 read -p "Ingresa tu nombre de usuario de Docker Hub: " username
 read -s -p "Ingresa tu contraseña de Docker Hub: " password
 
-export DOCKER_USERNAME=$username
-export DOCKER_PASSWORD=$password
-
-docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+docker login --username $username --password $password
 
 Recorrer cada carpeta
 for carpeta in "${carpetas[@]}"; do
@@ -22,9 +19,9 @@ for carpeta in "${carpetas[@]}"; do
 
    docker build -t $carpeta:v1 .
 
-   docker tag $carpeta:v1 $DOCKER_USERNAME/$carpeta:v1
+   docker tag $carpeta:v1 $username/$carpeta:v1
 
-   docker push docker.io/$DOCKER_USERNAME/$carpeta:v1
+   docker push docker.io/$username/$carpeta:v1
 
   cd ..
 
@@ -34,6 +31,6 @@ done
 
    docker build -t cartservice:v1 .
 
-   docker tag cartservice:v1 $DOCKER_USERNAME/cartservice:v1
+   docker tag cartservice:v1 $username/cartservice:v1
 
-   docker push docker.io/$DOCKER_USERNAME/cartservice:v1
+   docker push docker.io/$username/cartservice:v1
