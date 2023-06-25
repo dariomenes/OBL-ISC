@@ -156,4 +156,4 @@ data "aws_iam_role" "labrole" {
 
 <https://medium.com/devops-mojo/terraform-provision-amazon-eks-cluster-using-terraform-deploy-create-aws-eks-kubernetes-cluster-tf-4134ab22c594>
 
-[Ir al índice](/Version5/OBL/README.md)
+[Ir al índice](OBL-ISC/README.md)

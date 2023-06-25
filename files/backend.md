@@ -93,4 +93,4 @@ variable "nombredynamodb" {
 
 <https://registry.terraform.io/providers/hashicorp/aws/5.4.0/docs/resources/s3_bucket>
 
-[Ir al índice](/Version5/OBL/README.md)
+[Ir al índice](OBL-ISC/README.md)

@@ -127,4 +127,4 @@ instancia_deNodo  = "t3.medium"
 ### Variables globales ###
 ```
 ***
-[Ir al índice](/Version5/OBL/README.md)
+[Ir al índice](OBL-ISC/README.md)

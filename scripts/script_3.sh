@@ -1,16 +1,14 @@
 #!/bin/bash
 
-cd /home/ubuntu/deployment/source
+cd /home/$USER/OBL-ISC/deployment/source
 
 carpetas=("adservice" "checkoutservice" "currencyservice" "emailservice" "frontend" "loadgenerator" "paymentservice" "productcatalogservice" "recommendationservice" "shippingservice")
 
 read -p "Ingresa tu nombre de usuario de Docker Hub: " username
-read -s -p "Ingresa tu contraseña de Docker Hub: " password
+read -s -p "Ingresa tu contraseÃ±a de Docker Hub: " password
 
-export DOCKER_USERNAME=$username
-export DOCKER_PASSWORD=$password
 
-docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+docker login --username $username --password $password
 
 Recorrer cada carpeta
 for carpeta in "${carpetas[@]}"; do
@@ -22,18 +20,18 @@ for carpeta in "${carpetas[@]}"; do
 
    docker build -t $carpeta:v1 .
 
-   docker tag $carpeta:v1 $DOCKER_USERNAME/$carpeta:v1
+   docker tag $carpeta:v1 $username/$carpeta:v1
 
-   docker push docker.io/$DOCKER_USERNAME/$carpeta:v1
+   docker push docker.io/$username/$carpeta:v1
 
   cd ..
 
 done
 
-   cd /home/ubuntu/OBL-ISC/Version5/OBL/deployment/source/cartservice/src
+   cd /home/$USER/OBL-ISC/deployment/source/cartservice/src
 
    docker build -t cartservice:v1 .
 
-   docker tag cartservice:v1 $DOCKER_USERNAME/cartservice:v1
+   docker tag cartservice:v1 $username/cartservice:v1
 
-   docker push docker.io/$DOCKER_USERNAME/cartservice:v1
+   docker push docker.io/$username/cartservice:v1
