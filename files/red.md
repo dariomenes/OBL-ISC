@@ -111,5 +111,3 @@ output "id-subnet-2" {
 <https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster>
 
 <https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_node_group>
-
-[Ir al índice](OBL-ISC/README.md)

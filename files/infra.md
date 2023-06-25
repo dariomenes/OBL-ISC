@@ -155,5 +155,3 @@ data "aws_iam_role" "labrole" {
 <https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule>
 
 <https://medium.com/devops-mojo/terraform-provision-amazon-eks-cluster-using-terraform-deploy-create-aws-eks-kubernetes-cluster-tf-4134ab22c594>
-
-[Ir al índice](OBL-ISC/README.md)

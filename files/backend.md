@@ -92,5 +92,3 @@ variable "nombredynamodb" {
 <https://angelo-malatacca83.medium.com/aws-terraform-s3-and-dynamodb-backend-3b28431a76c1>
 
 <https://registry.terraform.io/providers/hashicorp/aws/5.4.0/docs/resources/s3_bucket>
-
-[Ir al índice](OBL-ISC/README.md)
