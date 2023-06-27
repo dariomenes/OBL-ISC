@@ -5,7 +5,7 @@
 * Heber Dario Meneses - 257370
 
 ## Presentacion del obligatorio
-Una empresa busca migrar su infraestructura on-premise al cloud, se entrega un diagramas de como es la estructura previa para verificar las necesidades. <br>
+Una empresa busca migrar su infraestructura on-premise al cloud, se entrega un diagrama de como debe estar estructurada la nueva arquitectura con sus microservicios. <br>
 ![](./files/images/obl2023.png)
 
 # Resumen de la solución
