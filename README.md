@@ -34,19 +34,14 @@ Es necesario tener una cuenta en DockerHub.
 ***
 
 1. Descargar el repositorio en algun sistema (Ubuntu en este caso)
-2. Ejecutar los scripts de aprovisionamiento de script_1 al script_3.
--El primer Script instala todo lo necesario para que funcione el Ubuntu
-Ejecute (. script_1.sh)
--El segundo Script le consulta por sus credenciales de AWS
-Ejecute (- script_2.sh)
-- El tercer Script le ayuda con el build, tag y push de las imagenes a docker hub
-Ejecute (. script_3.sh)
-3. Ejecutar el backend antes del main (Modificar al momento de llamar al recurso
-backend sin tener el bucket y dynamodb previamente creado.)
-4. Ejecutar en el directorio raiz OBL-ISC, terraform init.
-5. Ejecutar terraform apply -var-file=terraform.tfvars.
-6. Ejecutar el cuarto y final Script le ayuda a establecer comunicacion con Kubect1 y
-ver el sitio web a los 2 minutos proporcionandole el enlace.
+2. Ejecutar los scripts de aprovisionamiento de script_1 al script_3
+3. Ejecute (. script_1.sh) el primer Script instala todo lo necesario para que funcione el Ubuntu
+4. Ejecute (. script_2.sh) el segundo Script le consulta por sus credenciales de AWS
+5. Ejecute (. script_3.sh) el tercer Script le ayuda con el build, tag y push de las imagenes a docker hub
+6. Ejecutar el backend antes del main (Modificar al momento de llamar al recurso backend sin tener el bucket y dynamodb previamente creado.)
+7. Ejecutar en el directorio raiz OBL-ISC, terraform init
+8. Ejecutar terraform apply -var-file=terraform.tfvars
+9. Ejecutar el cuarto y final Script le ayuda a establecer comunicacion con Kubect1 y ver el sitio web a los 2 minutos proporcionandole el enlace
 
 ## Demostracion de funcionamiento
 ***
