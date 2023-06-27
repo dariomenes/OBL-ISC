@@ -5,7 +5,7 @@ aws eks --region us-east-1 update-kubeconfig --name kluster
 sleep 3
 
 # Crear los objetos definidos en el archivo manifests.yaml
-kubectl create -f /home/$USER/OBL-ISC/deployment/manifests_replicas.yaml
+envsubst < /home/$USER/OBL-ISC/deployment/manifests_replicas.yaml | kubectl apply -f -
 sleep 3
 
 #Filtra la columna que tiene el punto de acceso.
