@@ -34,12 +34,19 @@ Es necesario tener una cuenta en DockerHub.
 ***
 
 1. Descargar el repositorio en algun sistema (Ubuntu en este caso)
-2. Ejecutar los scripts de aprovisionamiento de script_1 al script_3.(Si las imagenes estan en un repositorio, no es necesario el script_2)
-3. Verificar la instalacion de AWS CLI, Terraform, Docker y Kubectl
-4. Ejecutar el backend (Modificar el momento de llamar al recurso backend sin tener el bucket y dynamodb previamente creado.)
-5. Ejecutar en el directorio raiz del git, terraform init
-6. terraform apply -var-name=terraform.tfvars.
-7. Ejecutar el script_final.sh
+2. Ejecutar los scripts de aprovisionamiento de script_1 al script_3.
+-El primer Script instala todo lo necesario para que funcione el Ubuntu
+Ejecute (. script_1.sh)
+-El segundo Script le consulta por sus credenciales de AWS
+Ejecute (- script_2.sh)
+- El tercer Script le ayuda con el build, tag y push de las imagenes a docker hub
+Ejecute (. script_3.sh)
+3. Ejecutar el backend antes del main (Modificar al momento de llamar al recurso
+backend sin tener el bucket y dynamodb previamente creado.)
+4. Ejecutar en el directorio raiz OBL-ISC, terraform init.
+5. Ejecutar terraform apply -var-file=terraform.tfvars.
+6. Ejecutar el cuarto y final Script le ayuda a establecer comunicacion con Kubect1 y
+ver el sitio web a los 2 minutos proporcionandole el enlace.
 
 ## Demostracion de funcionamiento
 ***

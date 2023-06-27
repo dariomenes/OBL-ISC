@@ -13,6 +13,7 @@ docker login --username $username --password $password
 Recorrer cada carpeta
 for carpeta in "${carpetas[@]}"; do
 
+
   # Entrar en la carpeta
   cd "$carpeta" 
 
@@ -24,7 +25,11 @@ for carpeta in "${carpetas[@]}"; do
 
    docker push docker.io/$username/$carpeta:v1
 
-  cd ..
+ cd ..
+
+   PALABRAMA=$(echo "$carpeta" | tr '[:lower:]' '[:upper:]')
+
+   export $PALABRAMA=$username/$carpeta:v1
 
 done
 
@@ -35,3 +40,7 @@ done
    docker tag cartservice:v1 $username/cartservice:v1
 
    docker push docker.io/$username/cartservice:v1
+
+   export CARTSERVICE=$username/cartservice:v1
+
+   cd /home/$USER/OBL-ISC/

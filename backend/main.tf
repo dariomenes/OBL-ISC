@@ -22,10 +22,10 @@ resource "aws_dynamodb_table" "backenddynamodb" {
   }
 }
 
-## Comentar BackEnd antes hacer terraform init ya que los recursos no estan creados ##
-## Quitar comentario Despues de creado se copia el State al bucket ###
-## Despues de ejecutar el comando terraform init -lock=false ###
-terraform {
+## Comentar desde la linea 28 a la 36 BackEnd antes hacer terraform init ya que los recursos no estan creados ##
+## Quitar comentario desde la linea 28 a la 36 despues de creado se copia el State al bucket ##
+## Despues de ejecutar el comando terraform init -lock=false ##
+/* terraform {
   backend "s3" {
     bucket         = "stateseguro"
     key            = "terraform.tfstate"
@@ -33,4 +33,4 @@ terraform {
     dynamodb_table = "terraform-lock-table"
     encrypt        = false
   }
-}
+} */

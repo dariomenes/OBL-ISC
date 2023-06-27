@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/adservice:v1
+        image: $ADSERVICE
         ports:
         - containerPort: 9555
         env:
@@ -81,7 +81,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/cartservice:v1
+        image: $CARTSERVICE
         ports:
         - containerPort: 7070
         env:
@@ -136,7 +136,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: dariomenes/checkoutservice:v1
+          image: $CHECKOUTSERVICE
           ports:
           - containerPort: 5050
           readinessProbe:
@@ -209,7 +209,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/currencyservice:v1
+        image: $CURRENCYSERVICE
         ports:
         - name: grpc
           containerPort: 7000
@@ -269,7 +269,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/emailservice:v1
+        image: $EMAILSERVICE
         ports:
         - containerPort: 8080
         env:
@@ -329,7 +329,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: dariomenes/frontend:v1
+          image: $FRONTEND
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -448,7 +448,7 @@ spec:
           value: "frontend:80"
       containers:
       - name: main
-        image: dariomenes/loadgenerator:v1
+        image: $LOADGENERATOR
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -482,7 +482,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/paymentservice:v1
+        image: $PAYMENTSERVICE
         ports:
         - containerPort: 50051
         env:
@@ -541,7 +541,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/productcatalogservice:v1
+        image: $PRODUCTCATALOGSERVICE
         ports:
         - containerPort: 3550
         env:
@@ -602,7 +602,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: dariomenes/recommendationservice:v1
+        image: $RECOMMENDATIONSERVICE
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -719,7 +719,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: server
-        image: dariomenes/shippingservice:v1
+        image: $SHIPPINGSERVICE
         ports:
         - containerPort: 50051
         env:
